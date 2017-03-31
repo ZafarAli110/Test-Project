@@ -1,0 +1,21 @@
+﻿@*@model IEnumerable<RestaurantListViewModel>*@
+@model IPagedList<RestaurantListViewModel>
+<div id="restaurantList">
+    <div class="pagedList" data-otf-target="#restaurantList">
+        @Html.PagedListPager(Model,page=> Url.Action("index" ,new { page}) ,
+         PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+    @foreach (var item in Model)
+    {
+        <div>
+            <h4>@item.Name</h4>
+        </div>
+        <div>
+            @item.City , @item.Country
+        </div>
+        <div>
+            Reviews : @item.NumberOfReviews
+            <hr />
+        </div>
+    }
+</div>
