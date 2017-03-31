@@ -15,7 +15,7 @@ $(function () {
             // $target.replaceWith(responseData);
             var $newHtml = (responseData); //var $newHtml = $(responseData)=>original but not working
             $target.replaceWith($newHtml);
-            $newHtml.effect("highlight");  //jquery UI effect not working
+         // $newHtml.effect("highlight");  //jquery UI effect not working
 
         });
 
